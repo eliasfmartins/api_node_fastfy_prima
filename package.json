@@ -4,9 +4,7 @@
   "description": "Esta é a documentação de requisitos para a API de Agenda de Contatos. Esta API permite aos usuários gerenciar contatos, categorizá-los e realizar operações de CRUD.",
   "main": "index.js",
   "type": "module",
-  "engines": {
-    "node": ">20"
-  },
+
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "tsx watch src/server.ts"
@@ -20,6 +18,7 @@
     "typescript": "^5.4.2"
   },
   "dependencies": {
-    "@prisma/client": "^5.11.0"
+    "@prisma/client": "^5.11.0",
+    "fastify": "^4.26.2"
   }
 }
