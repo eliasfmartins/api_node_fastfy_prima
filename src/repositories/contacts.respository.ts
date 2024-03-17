@@ -45,4 +45,12 @@ export class ContactsRepositoryPrisma implements ContactRepository {
         })
         return result
     }
+   async delete(id: string): Promise<boolean> {
+        const result =await prisma.contacts.delete({
+            where:{
+                id
+            }
+        })
+        return result ? true:false
+    }
 }
