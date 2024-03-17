@@ -1,10 +1,14 @@
 import fastify, { FastifyInstance } from "fastify";
 import { userRoutes } from "./routes/user.routes";
+import { contactsRoutes } from "./routes/contact.routes";
 
 const app: FastifyInstance = fastify()
 // basicamente o logger da varias informacoes no terminal
 app.register(userRoutes, {
     prefix: '/users',
+})
+app.register(contactsRoutes, {
+    prefix: '/contacts',
 })
 
 app.listen({
